@@ -4,29 +4,32 @@ tippy("[data-tippy-content]");
 // aos.js
 AOS.init({
   duration: 700,
-  once: true
+  once: true,
 });
 
 // navbar burger
-document.addEventListener('DOMContentLoaded', () => {
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+document.addEventListener("DOMContentLoaded", () => {
+  const $navbarBurgers = Array.prototype.slice.call(
+    document.querySelectorAll(".navbar-burger"),
+    0
+  );
 
   if ($navbarBurgers.length > 0) {
-    $navbarBurgers.forEach( el => {
-      el.addEventListener('click', () => {
+    $navbarBurgers.forEach((el) => {
+      el.addEventListener("click", () => {
         const target = el.dataset.target;
         const $target = document.getElementById(target);
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
+        el.classList.toggle("is-active");
+        $target.classList.toggle("is-active");
       });
     });
   }
 });
 
-$(document).ready(function() {
-  $(".navbar-burger").click(function() {
-      $(".navbar-burger").toggleClass("is-active");
-      $(".navbar-menu").toggleClass("is-active");
+$(document).ready(function () {
+  $(".navbar-burger").click(function () {
+    $(".navbar-burger").toggleClass("is-active");
+    $(".navbar-menu").toggleClass("is-active");
   });
 });
 
@@ -70,9 +73,9 @@ btn.on("click", function (e) {
 $("#success").click(function () {
   $(".notify").toggleClass("active");
   $("#notifyType").toggleClass("success");
-  
-  setTimeout(function(){
+
+  setTimeout(function () {
     $(".notify").removeClass("active");
     $("#notifyType").removeClass("success");
-  },2000);
+  }, 2000);
 });
