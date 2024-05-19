@@ -1,0 +1,11 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.achievement-badge {
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin: 0.25rem;
+}
